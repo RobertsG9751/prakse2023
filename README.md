@@ -5,7 +5,7 @@ No root direktorijas (prakse2023) palaist sekojošās kommandas:
 - cd backend
 - npm i
 - node server.js // vai nodemon server.js, ja izmanto nodemon biblioteku
-*izveidot jaunu termināli
+(izveidot jaunu termināli)
 - cd frontend
 - npm start
 
