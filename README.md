@@ -9,4 +9,4 @@ No root direktorijas (prakse2023) palaist sekojošās kommandas:
 - cd frontend
 - npm start
 
-Kad abi serveri ir palaisti, var droši sākt rakstit kodu. 
+Kad abi serveri ir palaisti, var droši sākt rakstīt kodu. 
