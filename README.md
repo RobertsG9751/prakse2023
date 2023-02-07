@@ -2,9 +2,9 @@ Lai sāktu pilnvērtīgi projektu, katru reizi nepieciešams palaist frontend un
 
 No root direktorijas (prakse2023) palaist sekojošās kommandas:
 
-cd frontend
+cd backend
 node server.js // vai nodemon server.js, ja izmanto nodemon biblioteku
-cd ../backend
+cd ../frontend
 npm start
 
 Kad abi serveri ir palaisti, var droši sākt rakstit kodu. 
