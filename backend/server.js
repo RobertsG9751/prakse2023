@@ -3,8 +3,10 @@ const passport = require('passport');
 const session = require('express-session');
 const passportSteam = require('passport-steam');
 const SteamStrategy = passportSteam.Strategy;
-const app = express();
+const cors = require("cors")
+const app = express(); 
 const port = 3001;
+app.use(cors())
 
 passport.serializeUser((user, done) => {
     done(null, user);
@@ -13,8 +15,8 @@ passport.serializeUser((user, done) => {
     done(null, user);
    });
    passport.use(new SteamStrategy({
-    returnURL: 'http://localhost:' + port + '/api/auth/steam/return',
-    realm: 'http://localhost:' + port + '/',
+    returnURL: 'http://localhost:3001/api/auth/steam/return',
+    realm: 'http://localhost:3001/',
     apiKey: 'F293588E3D0C16E3CF253D7CBD1BD0BC'
     }, function (identifier, profile, done) {
      process.nextTick(function () {
@@ -22,7 +24,7 @@ passport.serializeUser((user, done) => {
       return done(null, profile);
      });
     }
-   ));
+));
    app.use(session({
     secret: 'secret',
     saveUninitialized: true,
@@ -30,22 +32,22 @@ passport.serializeUser((user, done) => {
     cookie: {
      maxAge: 3600000
     }
-   }
-))
+}))
 app.use(passport.initialize());
 app.use(passport.session());
 
 
 app.get('/', (req, res) => {
-    res.send(req.user);
+    //res.send(req.user)
+    res.redirect(`http://localhost:3000/?steamid=${req.user.id}&username=${req.user.displayName}&avatar=${req.user._json.avatar}`)
 });
 
 app.get('/api/auth/steam', passport.authenticate('steam', {failureRedirect: '/'}), function (req, res) {
-    res.redirect('/')
+    res.redirect("/")
 });
 
 app.get('/api/auth/steam/return', passport.authenticate('steam', {failureRedirect: '/'}), function (req, res) {
-    res.redirect('/')
+    res.redirect("/")
 });
 
 app.listen(port, () => {
