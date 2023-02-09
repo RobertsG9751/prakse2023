@@ -17,9 +17,6 @@ function App() {
       setIsUser(true);
       window.location.replace("http://localhost:3000/");
     }
-    if (localStorage.getItem("user_data")) {
-      setIsUser(true);
-    }
   });
 
   return (
