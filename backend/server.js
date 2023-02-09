@@ -5,8 +5,13 @@ const passportSteam = require('passport-steam');
 const SteamStrategy = passportSteam.Strategy;
 const cors = require("cors")
 const app = express(); 
+const jwt = require('jsonwebtoken');
+const dotenv = require("dotenv")
 const port = 3001;
+
 app.use(cors())
+dotenv.config()
+app.use(express.json());
 
 passport.serializeUser((user, done) => {
     done(null, user);
@@ -38,8 +43,9 @@ app.use(passport.session());
 
 
 app.get('/', (req, res) => {
-    //res.send(req.user)
-    res.redirect(`http://localhost:3000/?steamid=${req.user.id}&username=${req.user.displayName}&avatar=${req.user._json.avatar}`)
+    const token = jwt.sign({ user: req.user }, 'jtprakse2023');
+    res.redirect(`http://localhost:3000/?data=${token}`)
+    //res.redirect(`http://localhost:3000/?steamid=${req.user.id}&username=${req.user.displayName}&avatar=${req.user._json.avatar}`)
 });
 
 app.get('/api/auth/steam', passport.authenticate('steam', {failureRedirect: '/'}), function (req, res) {

@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import "./App.css";
 import { useState, useEffect } from "react";
+=======
+import './App.css';
+import { useState, useEffect } from 'react';
+import * as Function from "./functions"
+import Login from "./Components/Login"
+import Main from "./Components/Main"
+>>>>>>> 373e8783c7ccc6812150a1b1a8eb40a986174585
 
 function App() {
   const [isUser, setIsUser] = useState(false);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
+<<<<<<< HEAD
   console.log(localStorage.getItem("user_id"));
   useEffect(() => {
     if (urlParams.get("steamid")) {
@@ -59,6 +68,35 @@ function App() {
           </>
         )}
       </body>
+=======
+
+
+  useEffect(()=>{
+    if(urlParams.get("data")){
+      const data = Function.parseJwt(urlParams.get("data"))
+      localStorage.setItem("user_data", JSON.stringify(data.user))
+      console.log(data)
+      setIsUser(true)
+      window.location.replace('http://localhost:3000/')
+    }
+    if(localStorage.getItem("user_data")){
+      setIsUser(true)
+    }
+  })
+
+  return (
+    <div className="App center_items">
+      {
+        isUser===false&&(
+          <Login></Login>
+        )
+      }
+      {
+        isUser===true&&(
+          <Main></Main>
+        )
+      }
+>>>>>>> 373e8783c7ccc6812150a1b1a8eb40a986174585
     </div>
   );
 }
