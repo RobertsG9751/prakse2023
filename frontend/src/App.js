@@ -12,6 +12,7 @@ function App() {
       localStorage.setItem("user_name", urlParams.get('username'))
       localStorage.setItem("user_avatar", urlParams.get('avatar'))
       setIsUser(true)
+      window.location.replace('http://localhost:3000/')
     }
   }, [])
   useEffect(()=>{
@@ -39,7 +40,7 @@ function App() {
           <>
             <p>Steam_id: {localStorage.getItem("user_id")}</p>
             <p>Username: {localStorage.getItem("user_name")}</p>
-            <img src={localStorage.getItem("user_avatar")}></img>
+            <img class="avatar" src={localStorage.getItem("user_avatar")}></img>
             <br></br>
             <a onClick={logout} href='http://localhost:3000/'>Logout</a>
           </>
