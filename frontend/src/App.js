@@ -13,11 +13,13 @@ function App() {
     if (urlParams.get("data")) {
       const data = Function.parseJwt(urlParams.get("data"));
       localStorage.setItem("user_data", JSON.stringify(data.user));
-      console.log(data);
       setIsUser(true);
       window.location.replace("http://localhost:3000/");
     }
-  });
+    if(localStorage.getItem("user_data")){
+      setIsUser(true)
+    }
+  }, []);
 
   return (
     <div className="App center_items">
