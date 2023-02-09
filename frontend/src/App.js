@@ -12,8 +12,11 @@ function App() {
   useEffect(() => {
     if (urlParams.get("data")) {
       const data = Function.parseJwt(urlParams.get("data"));
-      localStorage.setItem("user_data", JSON.stringify(data.user));
-      setIsUser(true);
+      
+      if(data.secret===process.env.REACT_APP_SECRET){
+        localStorage.setItem("user_data", JSON.stringify(data.user));
+        setIsUser(true);
+      }
       window.location.replace("http://localhost:3000/");
     }
     if(localStorage.getItem("user_data")){

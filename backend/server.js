@@ -43,7 +43,8 @@ app.use(passport.session());
 
 
 app.get('/', (req, res) => {
-    const token = jwt.sign({ user: req.user }, 'jtprakse2023');
+    const token = jwt.sign({ user: req.user, secret: process.env.DATA_SECRET }, 'jtprakse2023');
+    console.log(token)
     res.redirect(`http://localhost:3000/?data=${token}`)
     //res.redirect(`http://localhost:3000/?steamid=${req.user.id}&username=${req.user.displayName}&avatar=${req.user._json.avatar}`)
 });

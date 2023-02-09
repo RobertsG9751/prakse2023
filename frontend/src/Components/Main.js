@@ -3,7 +3,6 @@ import * as Function from "../functions"
 
 const Main = () =>{
     const user_data = JSON.parse(localStorage.getItem("user_data"))
-    console.log(user_data)
     return(
         <div className={`center_items ${style.wrapper}`}>
             <h2 className={style.text}>Your data:</h2>
