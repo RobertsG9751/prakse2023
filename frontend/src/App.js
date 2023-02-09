@@ -27,25 +27,28 @@ function App() {
     console.log("logged out")
   }
 
+
   ///// TEST UZMETUMS
   ///// Parāda lietotājam steam_id, username un avatar pēc steam login
   return (
     <div className="App">
+    <body class="background">
       {
         isUser===false &&(
-          <a href="http://localhost:3001/api/auth/steam">Sign in</a>
+          <a href="http://localhost:3001/api/auth/steam"><button class="log_button"><span class="text">Log in</span></button></a>
         )
       }{
         isUser===true &&(
           <>
-            <p>Steam_id: {localStorage.getItem("user_id")}</p>
-            <p>Username: {localStorage.getItem("user_name")}</p>
-            <img class="avatar" src={localStorage.getItem("user_avatar")}></img>
+            <div class="background"></div>
+            <div class="static_username">{localStorage.getItem("user_name")}</div>
+            <a href="?"><img class="static_avatar" src={localStorage.getItem("user_avatar")}></img></a>
             <br></br>
-            <a onClick={logout} href='http://localhost:3000/'>Logout</a>
+            <a onClick={logout} href='http://localhost:3000/'><button class="log_button"><span class="text">Log out</span></button></a>
           </>
         )
       }
+      </body>
     </div>
   );
 }
