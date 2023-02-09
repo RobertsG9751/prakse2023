@@ -1,0 +1,10 @@
+.image{
+    height: 50px;
+    width: 170px;
+}
+.heading{
+    color: white;
+}
+.wrapper{
+    flex-direction: column;
+}
