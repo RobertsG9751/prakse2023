@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\frontend",
+    "\\frontend\\public",
+    "\\frontend\\src",
+    "\\frontend\\src\\Components"
+  ],
+  "SelectedNode": "\\backend\\package-lock.json",
+  "PreviewInSolutionExplorer": false
+}

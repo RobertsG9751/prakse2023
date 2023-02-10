@@ -9,7 +9,7 @@ const Login = () => {
         <img
           className={style.image}
           alt="#"
-          src="https://cdn.discordapp.com/attachments/707559271793164292/1073637512880336918/steamlogin.png"
+          src="http://localhost:3000/images/steamlogin.png"
         ></img>
       </a>
     </div>
