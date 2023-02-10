@@ -40,10 +40,11 @@ passport.use(
     },
     function (identifier, profile, done) {
       process.nextTick(function () {
-      profile.identifier = identifier;
-      return done(null, profile);
-    });
-  })
+        profile.identifier = identifier;
+        return done(null, profile);
+      });
+    }
+  )
 );
 app.use(
   session({
@@ -51,35 +52,46 @@ app.use(
     saveUninitialized: true,
     resave: false,
     cookie: {
-    maxAge: 3600000,
-  },
-}));
+      maxAge: 3600000,
+    },
+  })
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 //tokenizē lietotāju datus un tad to pārsūta
 app.get("/", (req, res) => {
-  const token = jwt.sign({ user: req.user, secret: process.env.DATA_SECRET },"jtprakse2023");
+  const token = jwt.sign(
+    { user: req.user, secret: process.env.DATA_SECRET },
+    "jtprakse2023"
+  );
   res.redirect(`http://localhost:3000/?data=${token}`);
   //ievieto lietotāja steam id datubāzē
-  connection.query(`INSERT INTO steam_main (steamid) VALUES ("${req.user.id}") ON DUPLICATE KEY UPDATE steamid="${req.user.id}";`,(error, result) => {
-    console.error(error);
-      return res.status(500).send({ error: "Internal Server Error" });
+  connection.query(
+    `INSERT INTO steam_main (steamid) VALUES ("${req.user.id}") ON DUPLICATE KEY UPDATE steamid="${req.user.id}";`,
+    (error, result) => {
+      console.error(error);
+      // return res.status(500).send({ error: "Internal Server Error" });
     }
   );
 });
 
-app.get("/api/auth/steam", passport.authenticate("steam", { failureRedirect: "/" }),function (req, res) {
-  res.redirect("/");
-});
+app.get(
+  "/api/auth/steam",
+  passport.authenticate("steam", { failureRedirect: "/" }),
+  function (req, res) {
+    res.redirect("/");
+  }
+);
 
 app.get(
   "/api/auth/steam/return",
   passport.authenticate("steam", { failureRedirect: "/" }),
   function (req, res) {
     res.redirect("/");
-});
+  }
+);
 
 app.listen(port, () => {
   console.log("Listening, port " + port);
