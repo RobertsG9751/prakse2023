@@ -1,3 +1,4 @@
+//packages
 const express = require("express");
 const passport = require("passport");
 const session = require("express-session");
@@ -13,6 +14,7 @@ app.use(cors());
 dotenv.config();
 app.use(express.json());
 
+//savienojas ar datubāzi
 const mysql = require("mysql2");
 const connection = mysql.createConnection({
     host: "sql7.freemysqlhosting.net",
@@ -22,6 +24,7 @@ const connection = mysql.createConnection({
 });
 connection.connect();
 
+//uzstāda passport, lai autentificētu lietotāju caur steam
 passport.serializeUser((user, done) => {
     done(null, user);
 });
@@ -56,6 +59,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+//tokenizē lietotāju datus un tad to pārsūta
 app.get("/", (req, res) => {
     const token = jwt.sign(
         { user: req.user, secret: process.env.DATA_SECRET },
@@ -64,6 +68,7 @@ app.get("/", (req, res) => {
     //   console.log(token);
     res.redirect(`http://localhost:3000/?data=${token}`);
     //res.redirect(`http://localhost:3000/?steamid=${req.user.id}&username=${req.user.displayName}&avatar=${req.user._json.avatar}`)
+    //ievieto lietotāja steam id datubāzē
     connection.query(
         `INSERT INTO steam_main (steamid)
     VALUES ("${req.user.id}")
