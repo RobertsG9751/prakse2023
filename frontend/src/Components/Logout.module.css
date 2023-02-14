@@ -11,11 +11,11 @@
 }
 
 .logout_btn {
-  /* scale: 1.2;
+  scale: 1.2;
   width: 2rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  margin-left: 1rem; */
+  margin-left: 1rem;
 }
 
 .logout_btn:hover {
