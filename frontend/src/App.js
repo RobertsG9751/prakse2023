@@ -2,7 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import * as Function from "./functions";
 import Login from "./Components/Login";
-import Main from "./Components/Main";
+import Logout from "./Components/Logout";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
@@ -27,11 +27,7 @@ function App() {
   return (
     <>
       {isUser === false && <Login></Login>}
-      {isUser === true && (
-        <div className="App center_items">
-          <Main></Main>
-        </div>
-      )}
+      {isUser === true && <Logout></Logout>}
     </>
   );
 }
