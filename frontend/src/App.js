@@ -25,10 +25,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App center_items">
+    <>
       {isUser === false && <Login></Login>}
-      {isUser === true && <Main></Main>}
-    </div>
+      {isUser === true && (
+        <div className="App center_items">
+          <Main></Main>
+        </div>
+      )}
+    </>
   );
 }
 
