@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import * as Function from "./functions";
 import Login from "./Components/Login";
 import Logout from "./Components/Logout";
+import Header from "./Components/Header";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
@@ -26,8 +27,7 @@ function App() {
 
   return (
     <>
-      {isUser === false && <Login></Login>}
-      {isUser === true && <Logout></Logout>}
+      <Header isLogged={isUser}></Header>
     </>
   );
 }

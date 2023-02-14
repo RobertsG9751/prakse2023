@@ -8,48 +8,6 @@
 .login_btn:hover .steam_logo {
   fill: black;
 }
-
-.heading {
-  color: white;
-}
-.wrapper {
-  flex-direction: column;
-}
-
-header {
-  color: white;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  background-color: black;
-  display: inline-grid;
-  grid-template-columns: 0.5fr 3fr 0.5fr;
-  padding: 1.5rem;
-  border-bottom: solid 2px white;
-}
-.logo {
-  place-self: center;
-}
-
-.login_btn {
-  background-color: none;
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-  height: 50px;
-  width: 18vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  border: 2px solid white;
-  z-index: 1;
-  transition-delay: 0.15s;
-  position: relative;
-}
-
 .login_btn:hover {
   color: black;
 }
@@ -70,35 +28,21 @@ header {
 .login_btn:hover::before {
   top: 7.5%;
 }
-
-.main_menu_list {
+.login_btn {
+  background-color: none;
+  text-decoration: none;
+  color: white;
   font-size: 1.5rem;
-  text-transform: uppercase;
+  height: 50px;
+  width: 18vmin;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
-.main_menu_list li {
-  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   cursor: pointer;
-  position: relative;
   font-weight: 600;
-}
-
-.main_menu_list li::after {
-  position: absolute;
-  content: "";
-  background-color: white;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-  transform-origin: bottom left;
-}
-
-.main_menu_list li:hover::after {
-  transform: scaleX(1);
+  border: 2px solid white;
+  z-index: 1;
+  transition-delay: 0.15s;
+  position: relative;
 }
