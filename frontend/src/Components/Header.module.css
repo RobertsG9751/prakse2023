@@ -59,5 +59,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 4.5vw;
+    gap: 1rem;
+  }
+
+  .header {
+    height: 50px;
   }
 }
