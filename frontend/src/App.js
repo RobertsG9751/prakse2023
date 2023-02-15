@@ -5,6 +5,7 @@ import Login from "./Components/Login";
 import Logout from "./Components/Logout";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Main from "./Components/Main";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
@@ -29,44 +30,7 @@ function App() {
   return (
     <>
       <Header isLogged={isUser} />
-      {/* <article className="test">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id mauris
-        orci. Pellentesque nulla odio, dapibus id sollicitudin pellentesque,
-        suscipit vitae tortor. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. In id mauris orci. Pellentesque nulla odio, dapibus id
-        sollicitudin pellentesque, suscipit vitae tortor.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. In id mauris orci. Pellentesque nulla
-        odio, dapibus id sollicitudin pellentesque, suscipit vitae tortor.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. In id mauris orci.
-        Pellentesque nulla odio, dapibus id sollicitudin pellentesque, suscipit
-        vitae tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        id mauris orci. Pellentesque nulla odio, dapibus id sollicitudin
-        pellentesque, suscipit vitae tortor.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. In id mauris orci. Pellentesque nulla odio,
-        dapibus id sollicitudin pellentesque, suscipit vitae tortor.Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. In id mauris orci.
-        Pellentesque nulla odio, dapibus id sollicitudin pellentesque, suscipit
-        vitae tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-        id mauris orci. Pellentesque nulla odio, dapibus id sollicitudin
-        pellentesque, suscipit vitae tortor.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. In id mauris orci. Pellentesque nulla odio,
-        dapibus id sollicitudin pellentesque, suscipit vitae tortor.Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. In id mauris orci.
-        Pellentesque nulla odio, dapibus id sollicitudin pellentesque, suscipit
-        vitae tortor.ipit vitae tortor.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. In id mauris orci. Pellentesque nulla odio, dapibus id
-        sollicitudin pellentesque, suscipit vitae tortor.ipit vitae tortor.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. In id mauris orci.
-        Pellentesque nulla odio, dapibus id sollicitudin pellentesque, suscipit
-        vitae tortor.ipit vitae tortor.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. In id mauris orci. Pellentesque nulla odio, dapibus id
-        sollicitudin pellentesque, suscipit vitae tortor.ipit vitae tortor.Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. In id mauris orci.
-        Pellentesque nulla odio, dapibus id sollicitudin pellentesque, suscipit
-        vitae tortor.ipit vitae tortor.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. In id mauris orci. Pellentesque nulla odio, dapibus id
-        sollicitudin pellentesque, suscipit vitae tortor. nigga
-      </article> */}
+      <Main></Main>
       <Footer />
     </>
   );
