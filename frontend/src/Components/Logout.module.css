@@ -16,10 +16,12 @@
   cursor: pointer;
   transition: 0.2s ease-in-out;
   margin-left: 1rem;
+  opacity: 0.7;
 }
 
 .logout_btn:hover {
-  scale: 1.4;
+  /* scale: 1.4; */
+  opacity: 1;
 }
 
 .username {
@@ -34,10 +36,11 @@
   border-radius: 10px;
 }
 @media only screen and (max-width: 800px) {
-  .avatar, .username{
+  .avatar,
+  .username {
     display: none;
   }
-  .logout_btn{
+  .logout_btn {
     margin-left: 20px;
   }
 }

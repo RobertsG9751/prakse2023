@@ -1,0 +1,59 @@
+.footer {
+  background: black;
+  padding: 50px 0 30px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  width: 100%;
+  border-top: 2px solid white;
+  margin-top: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: auto;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.logo {
+  color: white;
+  display: block;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  .col {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+}
