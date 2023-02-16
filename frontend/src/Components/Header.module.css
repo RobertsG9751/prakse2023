@@ -9,6 +9,7 @@
 }
 .logo {
   place-self: center;
+  user-select: none;
 }
 
 .main_menu_list {
