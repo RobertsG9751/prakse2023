@@ -29,12 +29,14 @@
   top: 7.5%;
 }
 .login_btn {
+  opacity: 1;
+  transition: 0s;
   background-color: none;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
-  height: 50px;
-  width: 18vmin;
+  height: 3rem;
+  width: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
