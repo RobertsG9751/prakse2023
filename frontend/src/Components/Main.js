@@ -9,14 +9,14 @@ const Main = () => {
       <div className={style.banner}>
         <img
           className={style.banner_img}
-          src="https://cdn.discordapp.com/attachments/707559271793164292/1075562550692950046/counter-strike-global-offensive-4k-new-af-2560x1440_1.jpg"
+          src="http://localhost:3000/images/counter-strike-global-offensive-banner.jpg"
         ></img>
         <h1 className={style.banner_text}>TIME TO MAKE SOME BREAD</h1>
       </div>
       <div className={style.crypto_sec}>
         <img
           className={style.crypto_img}
-          src="https://cdn.discordapp.com/attachments/707559271793164292/1075833695736434840/coin.jpg"
+          src="http://localhost:3000/images/coin.jpg"
         ></img>
         <div className={style.crypto_wrapper}>
           <h1 className={style.crypto_text}>

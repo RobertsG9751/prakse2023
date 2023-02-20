@@ -10,10 +10,10 @@ const Header = (props) =>{
             </div>
             <nav className={style.main_menu}>
                 <ul className={style.main_menu_list}>
-                <li>Home</li>
-                <li>Games</li>
-                <li>Servers</li>
-                <li>About</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Servers</a></li>
+                <li><a href="#">About</a></li>
                 </ul>
             </nav>
             {props.isLogged===true&&(<Logout></Logout>)}
