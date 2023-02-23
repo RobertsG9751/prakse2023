@@ -6,6 +6,7 @@ import Logout from "./Components/Logout";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
+import Section1 from "./Components/Section1/Section1";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
@@ -31,6 +32,7 @@ function App() {
     <>
       <Header isLogged={isUser} />
       <Main></Main>
+      <Section1></Section1>
       <Footer />
     </>
   );

@@ -1,0 +1,17 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.blocks{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    justify-content: center;
+    gap: 30px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Main.module.css";
+import Button from "../UI/Button";
 
 const Main = () => {
   const user_data = JSON.parse(localStorage.getItem("user_data"));
@@ -22,12 +23,7 @@ const Main = () => {
           <h1 className={style.crypto_text}>
             Get paid securely in cryptocurrency
           </h1>
-          <a
-            href="http://localhost:3001/api/auth/steam"
-            className={style.crypto_btn}
-          >
-            <span>Read more</span>
-          </a>
+          <Button text={"Read More!"}></Button>
         </div>
       </div>
     </main>

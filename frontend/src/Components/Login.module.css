@@ -55,7 +55,7 @@
     width: 20vw;
     height: 5vh;
   }
-  span {
+  .text{
     display: none;
   }
   .steam_logo {
