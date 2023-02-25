@@ -24,7 +24,7 @@ const Main = () => {
           <h1 className={style.crypto_text}>
             Get paid securely in cryptocurrency
           </h1>
-          <Button text={"Read More!"}></Button>
+          <Button text={"Read More"}></Button>
         </div>
       </div>
       <Section1></Section1>

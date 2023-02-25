@@ -9,7 +9,7 @@ import Main from "./Components/Main";
 import Servers from "./Components/Servers";
 
 function App() {
-  const [active, setActive] = useState("Servers");
+  const [active, setPage] = useState("Main");
   const [isUser, setIsUser] = useState(false);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -28,10 +28,17 @@ function App() {
       setIsUser(true);
     }
   }, []);
-
+  const handleServers = function () {
+    setPage("Servers");
+    console.log(`deezx`);
+  };
+  const handleMain = function () {
+    setPage("Main");
+    console.log(`deezx`);
+  };
   return (
     <>
-      <Header isLogged={isUser} />
+      <Header isLogged={isUser} servers={handleServers} main={handleMain} />
       {active === "Main" && <Main></Main>}
       {active === "Servers" && <Servers></Servers>}
       <Footer />
