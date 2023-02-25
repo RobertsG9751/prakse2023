@@ -6,9 +6,10 @@ import Logout from "./Components/Logout";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
-import Section1 from "./Components/Section1/Section1";
+import Servers from "./Components/Servers";
 
 function App() {
+  const [active, setActive] = useState("Servers");
   const [isUser, setIsUser] = useState(false);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -31,8 +32,8 @@ function App() {
   return (
     <>
       <Header isLogged={isUser} />
-      <Main></Main>
-      <Section1></Section1>
+      {active === "Main" && <Main></Main>}
+      {active === "Servers" && <Servers></Servers>}
       <Footer />
     </>
   );

@@ -1,40 +1,39 @@
 .button:hover {
-    color: black;
-  }
-  
-  .button::before {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    bottom: 10%;
-    left: 2%;
-    right: 2%;
-    top: 100%;
-    background-color: white;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .button:hover::before {
-    top: 10%;
-  }
-  .button {
-    opacity: 1;
-    transition: 0s;
-    background-color: none;
-    text-decoration: none;
-    color: white;
-    font-size: 125%;
-    /* height: 10%; */
-    /* width: 15%; */
-    padding: 2px 5px 2px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
-    border: 2px solid white;
-    z-index: 1;
-    transition-delay: 0.15s;
-    position: relative;
-  }
-  
+  color: black;
+}
+
+.button::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 10%;
+  left: 2%;
+  right: 2%;
+  top: 100%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover::before {
+  top: 10%;
+}
+.button {
+  opacity: 1;
+  transition: 0s;
+  background-color: none;
+  text-decoration: none;
+  color: white;
+  font-size: 125%;
+  /* height: 10%; */
+  /* width: 15%; */
+  padding: 2px 5px 2px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid white;
+  z-index: 1;
+  transition-delay: 0.15s;
+  position: relative;
+}

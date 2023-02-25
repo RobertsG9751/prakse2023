@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Main.module.css";
 import Button from "../UI/Button";
+import Section1 from "./Section1/Section1";
 
 const Main = () => {
   const user_data = JSON.parse(localStorage.getItem("user_data"));
@@ -26,6 +27,7 @@ const Main = () => {
           <Button text={"Read More!"}></Button>
         </div>
       </div>
+      <Section1></Section1>
     </main>
   );
 };
