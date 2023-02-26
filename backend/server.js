@@ -8,6 +8,7 @@ const cors = require("cors");
 const app = express();
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
+const Gamedig = require("gamedig");
 const port = 3001;
 
 app.use(cors());
@@ -92,6 +93,19 @@ app.get(
     res.redirect("/");
   }
 );
+
+app.get("/:game/:ip", async (req, res) => {
+  const { game, ip } = req.params;
+  const [host, port] = ip.split(":");
+
+  const serverData = await Gamedig.query({
+    type: game,
+    host,
+    port,
+  });
+
+  res.send({ game, ip, data: serverData });
+});
 
 app.listen(port, () => {
   console.log("Listening, port " + port);
