@@ -15,6 +15,7 @@ const Main = () => {
         ></img>
         <h1 className={style.banner_text}>TIME TO MAKE SOME BREAD</h1>
       </div>
+      <Section1></Section1>
       <div className={style.crypto_sec}>
         <img
           className={style.crypto_img}
@@ -27,7 +28,6 @@ const Main = () => {
           <Button text={"Read More"}></Button>
         </div>
       </div>
-      <Section1></Section1>
     </main>
   );
 };

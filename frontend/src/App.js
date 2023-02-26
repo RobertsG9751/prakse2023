@@ -30,11 +30,9 @@ function App() {
   }, []);
   const handleServers = function () {
     setPage("Servers");
-    console.log(`deezx`);
   };
   const handleMain = function () {
     setPage("Main");
-    console.log(`deezx`);
   };
   return (
     <>

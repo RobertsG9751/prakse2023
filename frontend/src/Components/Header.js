@@ -16,7 +16,9 @@ const Header = (props) => {
             </a>
           </li>
           <li>
-            <a href="#">Games</a>
+            <a className={style.whitetext} href="#">
+              Games
+            </a>
           </li>
           <li>
             <a onClick={props.servers} href="#">
