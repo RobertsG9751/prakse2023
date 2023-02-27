@@ -34,54 +34,63 @@
   }
    */
 
-   .card{
-    position: relative;
-    width: 400px;
-    height: 200px;
-    gap: 20px;
-    
-   }
-   .card::before{
-    content: "";
-    background-image: url("https://cdn.discordapp.com/attachments/707559271793164292/1079391020657168414/csgo_wallpaper6_hu8a583a1e4d03891081633cd85e8e5f7f_8730617_1920x1080_resize_lanczos_3.png");      background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.6;
-   }
-   .content{
-    height: 100%;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: 600;
-    font-size: 110%;
-   }
+.card {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  gap: 20px;
+}
+.card::before {
+  content: "";
+  background-image: url("https://cdn.discordapp.com/attachments/707559271793164292/1079391020657168414/csgo_wallpaper6_hu8a583a1e4d03891081633cd85e8e5f7f_8730617_1920x1080_resize_lanczos_3.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+.content {
+  height: 100%;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 110%;
+}
 
-   .connect {
-    position: relative;
-    right: 5%;
-    bottom: 40%;
-    text-decoration: none;
-    opacity: 1;
-    padding: 1rem;
-    transition: 0.2s ease-in-out;
-    width: 50px;
-  }
-  
-  .connect_svg {
-    fill: white;
-    opacity: 1;
-    position: absolute;
-    width: 3rem;
-    right: 0;
-    bottom: 0;
-    transition: 0.2s ease-in-out;
-  }
-  .connect_svg:hover {
-    fill: #3ccc8b;
-  }
+.connect {
+  position: relative;
+  right: 5%;
+  bottom: 40%;
+  text-decoration: none;
+  opacity: 1;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+  width: 50px;
+}
+
+.connect_svg {
+  fill: white;
+  opacity: 1;
+  position: absolute;
+  width: 3rem;
+  right: 0;
+  bottom: 0;
+  transition: 0.2s ease-in-out;
+}
+.connect_svg:hover {
+  fill: #3ccc8b;
+}
+
+.players_svg {
+  fill: none;
+  outline: white;
+  opacity: 1;
+  margin: 0 0.5rem;
+  height: 1.5rem;
+  transform: translateY(5px);
+}

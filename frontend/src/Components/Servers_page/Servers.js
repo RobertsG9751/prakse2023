@@ -14,7 +14,7 @@ const Servers = () => {
   }, []);
 
   const [serverInfo, setServerInfo] = useState({
-    data: { map: "", players: [], maxplayers: 2 },
+    data: { map: "", players: [], maxplayers: 2, ping: 0 },
   });
   console.log(serverInfo);
 
@@ -22,13 +22,42 @@ const Servers = () => {
     <div className={style.container}>
       <h2 className={style.heading}>Servers</h2>
       <div className={style.server_list}>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      <ServerCard map={serverInfo.data.map} maxPlayers={serverInfo.data.maxplayers} playerCount={serverInfo.data.players.length}></ServerCard>
-      
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
+        <ServerCard
+          map={serverInfo.data.map}
+          maxPlayers={serverInfo.data.maxplayers}
+          playerCount={serverInfo.data.players.length}
+          ping={serverInfo.data.ping}
+        ></ServerCard>
       </div>
     </div>
   );
