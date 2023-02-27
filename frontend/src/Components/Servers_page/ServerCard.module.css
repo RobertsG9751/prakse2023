@@ -1,4 +1,4 @@
-.server_card {
+/* .server_card {
     aspect-ratio: 3/1.5;
     position: relative;
   }
@@ -12,8 +12,58 @@
     user-select: none;
   }
   
-  .connect {
+  .server_info {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 90%; 
+    font-size: 150%;
+    color: white;
+    opacity: 1;
+    overflow: hidden;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .server_stats {
+    font-size: 1rem;
+  }
+   */
+
+   .card{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    gap: 20px;
+    
+   }
+   .card::before{
+    content: "";
+    background-image: url("https://cdn.discordapp.com/attachments/707559271793164292/1079391020657168414/csgo_wallpaper6_hu8a583a1e4d03891081633cd85e8e5f7f_8730617_1920x1080_resize_lanczos_3.png");      background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+   }
+   .content{
+    height: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 110%;
+   }
+
+   .connect {
+    position: relative;
     right: 5%;
     bottom: 40%;
     text-decoration: none;
@@ -32,29 +82,6 @@
     bottom: 0;
     transition: 0.2s ease-in-out;
   }
-  
   .connect_svg:hover {
     fill: #3ccc8b;
   }
-  
-  .server_info {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* width: 60%;
-    height: 90%; */
-    font-size: 150%;
-    color: white;
-    opacity: 1;
-    overflow: hidden;
-    padding: 20px;
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  
-  .server_stats {
-    font-size: 1rem;
-  }
-  

@@ -14,7 +14,7 @@
 .banner_img {
   object-position: left top;
   min-width: 120%;
-  -webkit-mask-image: -webkit-gradient(
+  -webkit-mask-image:(
     linear,
     left top,
     left bottom,

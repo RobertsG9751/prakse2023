@@ -36,7 +36,8 @@ function App() {
     <>
       <Header isLogged={isUser} handlePage={handlePage} />
       {active === "Home" && <Main handlePage={handlePage}></Main>}
-      {active === "Servers" && <Servers></Servers>}
+      {active === "Servers" && <div className="center-div"><Servers></Servers></div>
+      }
       <Footer />
     </>
   );
