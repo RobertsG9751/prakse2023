@@ -9,7 +9,10 @@ import Main from "./Components/Main";
 import Servers from "./Components/Servers_page/Servers";
 
 function App() {
-  const [active, setPage] = useState("Home");
+  if(!localStorage.getItem("pageView")){
+    localStorage.setItem("pageView", "Home")
+  }
+  const [active, setPage] = useState(localStorage.getItem("pageView"));
   const [isUser, setIsUser] = useState(false);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -30,7 +33,8 @@ function App() {
   }, []);
   const handlePage = function (page) {
     window.scrollTo(0, 0);
-    setPage(page);
+    localStorage.setItem("pageView", page)
+    setPage(localStorage.getItem("pageView"));
   };
   return (
     <>
