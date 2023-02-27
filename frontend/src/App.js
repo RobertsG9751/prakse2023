@@ -6,10 +6,10 @@ import Logout from "./Components/Logout";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
-import Servers from "./Components/Servers";
+import Servers from "./Components/Servers_page/Servers";
 
 function App() {
-  const [active, setPage] = useState("Main");
+  const [active, setPage] = useState("Home");
   const [isUser, setIsUser] = useState(false);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -28,16 +28,14 @@ function App() {
       setIsUser(true);
     }
   }, []);
-  const handleServers = function () {
-    setPage("Servers");
-  };
-  const handleMain = function () {
-    setPage("Main");
+  const handlePage = function (page) {
+    window.scrollTo(0, 0);
+    setPage(page);
   };
   return (
     <>
-      <Header isLogged={isUser} servers={handleServers} main={handleMain} />
-      {active === "Main" && <Main></Main>}
+      <Header isLogged={isUser} handlePage={handlePage} />
+      {active === "Home" && <Main handlePage={handlePage}></Main>}
       {active === "Servers" && <Servers></Servers>}
       <Footer />
     </>

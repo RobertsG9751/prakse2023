@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+}
+
+.server_list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: center;
+  gap: 20px;
+}
+

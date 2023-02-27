@@ -4,7 +4,8 @@
     justify-content: center;
     color: white;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    margin-top: 50px;
     flex-wrap: wrap;
 }
 .blocks{

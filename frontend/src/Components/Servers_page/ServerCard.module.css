@@ -1,0 +1,60 @@
+.server_card {
+    aspect-ratio: 3/1.5;
+    position: relative;
+  }
+  
+  .server_img {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    user-select: none;
+  }
+  
+  .connect {
+    position: absolute;
+    right: 5%;
+    bottom: 40%;
+    text-decoration: none;
+    opacity: 1;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+    width: 50px;
+  }
+  
+  .connect_svg {
+    fill: white;
+    opacity: 1;
+    position: absolute;
+    width: 3rem;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .connect_svg:hover {
+    fill: #3ccc8b;
+  }
+  
+  .server_info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 60%;
+    height: 90%; */
+    font-size: 150%;
+    color: white;
+    opacity: 1;
+    overflow: hidden;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .server_stats {
+    font-size: 1rem;
+  }
+  

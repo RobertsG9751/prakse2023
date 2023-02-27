@@ -3,6 +3,10 @@ import Login from "./Login";
 import Logout from "./Logout";
 
 const Header = (props) => {
+
+  const handlePage = (e) =>{
+    props.handlePage(e.target.textContent)
+  }
   return (
     <header className={style.header}>
       <div className={style.logo}>
@@ -11,7 +15,7 @@ const Header = (props) => {
       <nav className={style.main_menu}>
         <ul className={style.main_menu_list}>
           <li>
-            <a onClick={props.main} href="#">
+            <a onClick={handlePage} href="#">
               Home
             </a>
           </li>
@@ -21,7 +25,7 @@ const Header = (props) => {
             </a>
           </li>
           <li>
-            <a onClick={props.servers} href="#">
+            <a onClick={handlePage} href="#">
               Servers
             </a>
           </li>

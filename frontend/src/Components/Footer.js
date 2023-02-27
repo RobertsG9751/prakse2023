@@ -9,45 +9,45 @@ const Footer = () => {
             *logo*
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id
-            mauris orci.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           </p>
         </div>
         <div className={style.col}>
-          <h3>Lorem ipsum</h3>
+          <h3>Policies</h3>
           <ul>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">FAQs</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Terms of Service</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Privacy Policy</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">About</a>
             </li>
           </ul>
         </div>
         <div className={style.col}>
-          <h3>Lorem ipsum</h3>
+          <h3>Communities</h3>
           <ul>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Servers</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Discord Server</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Instagram</a>
             </li>
             <li>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">Twitter</a>
             </li>
           </ul>
         </div>
       </div>
+      <p className={style.copyright}>Copyright © 2023 studijaIT.csgo.com All rights reserved.</p>
     </footer>
   );
 };

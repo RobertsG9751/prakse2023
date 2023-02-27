@@ -3,7 +3,7 @@ import style from "./Main.module.css";
 import Button from "../UI/Button";
 import Section1 from "./Section1/Section1";
 
-const Main = () => {
+const Main = (props) => {
   const user_data = JSON.parse(localStorage.getItem("user_data"));
 
   return (
@@ -15,7 +15,7 @@ const Main = () => {
         ></img>
         <h1 className={style.banner_text}>TIME TO MAKE SOME BREAD</h1>
       </div>
-      <Section1></Section1>
+      <Section1 handlePage={props.handlePage}></Section1>
       <div className={style.crypto_sec}>
         <img
           className={style.crypto_img}
