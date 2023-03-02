@@ -20,7 +20,7 @@ const Header = (props) => {
             </a>
           </li>
           <li>
-            <a className={style.whitetext} href="#">
+            <a onClick={handlePage} className={style.whitetext} href="#">
               Games
             </a>
           </li>
@@ -30,7 +30,7 @@ const Header = (props) => {
             </a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a onClick={handlePage} href="#">About</a>
           </li>
         </ul>
       </nav>

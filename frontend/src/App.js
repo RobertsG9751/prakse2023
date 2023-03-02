@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import * as Function from "./functions";
-import Login from "./Components/Login";
-import Logout from "./Components/Logout";
+import About from "./Components/About_page/About";
+import Games from "./Components/Games_page/Games";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
@@ -40,8 +40,9 @@ function App() {
     <>
       <Header isLogged={isUser} handlePage={handlePage} />
       {active === "Home" && <Main handlePage={handlePage}></Main>}
-      {active === "Servers" && <div className="center-div"><Servers></Servers></div>
-      }
+      {active === "Servers" && <div className="center-div"><Servers></Servers></div>}
+      {active === "About" && <About></About>} 
+      {active === "Games" && <Games></Games>} 
       <Footer />
     </>
   );
