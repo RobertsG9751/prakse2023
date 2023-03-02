@@ -11,7 +11,7 @@ const Logout = (props) => {
   }
   return (
       <div className={style.user_info}>
-        <img className={style.avatar} src={user_data.photos[2].value}></img>
+        <img className={style.avatar}  src={user_data.photos[2].value}></img>
         <h5 onClick={handlePage}  className={style.username}>{user_data.displayName}</h5>
         <svg
           onClick={Function.logout}
