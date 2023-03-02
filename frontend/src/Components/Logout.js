@@ -2,13 +2,17 @@ import style from "./Logout.module.css";
 import React from "react";
 import * as Function from "../functions";
 
-const Logout = () => {
+const Logout = (props) => {
   const user_data = JSON.parse(localStorage.getItem("user_data"));
 
+
+  const handlePage = (e) =>{
+    props.handlePage("User")
+  }
   return (
       <div className={style.user_info}>
         <img className={style.avatar} src={user_data.photos[2].value}></img>
-        <h5 className={style.username}>{user_data.displayName}</h5>
+        <h5 onClick={handlePage}  className={style.username}>{user_data.displayName}</h5>
         <svg
           onClick={Function.logout}
           className={style.logout_btn}

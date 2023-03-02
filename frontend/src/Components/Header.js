@@ -34,7 +34,7 @@ const Header = (props) => {
           </li>
         </ul>
       </nav>
-      {props.isLogged === true && <Logout></Logout>}
+      {props.isLogged === true && <Logout handlePage={props.handlePage}></Logout>}
       {props.isLogged === false && <Login></Login>}
     </header>
   );

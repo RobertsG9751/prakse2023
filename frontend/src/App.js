@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
 import Servers from "./Components/Servers_page/Servers";
+import UserPanel from "./Components/User_page/UserPanel";
 
 function App() {
   if(!localStorage.getItem("pageView")){
@@ -43,6 +44,7 @@ function App() {
       {active === "Servers" && <div className="center-div"><Servers></Servers></div>}
       {active === "About" && <About></About>} 
       {active === "Games" && <Games></Games>} 
+      {active === "User" && <UserPanel></UserPanel> }
       <Footer />
     </>
   );
