@@ -14,7 +14,7 @@ processes = [Popen(new_window_command + echo)]
 
 #frontend
 echo = [sys.executable, "-c",
-        "import os; os.system('cd frontend && npm start')"]
+        "import os; os.system('cd frontend && npm i && npm start')"]
 processes = [Popen(new_window_command + echo)]
 
 
