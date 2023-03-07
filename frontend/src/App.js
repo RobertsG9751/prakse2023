@@ -10,8 +10,8 @@ import Servers from "./Components/Servers_page/Servers";
 import UserPanel from "./Components/User_page/UserPanel";
 
 function App() {
-  if(!localStorage.getItem("pageView")){
-    localStorage.setItem("pageView", "Home")
+  if (!localStorage.getItem("pageView")) {
+    localStorage.setItem("pageView", "Home");
   }
   const [active, setPage] = useState(localStorage.getItem("pageView"));
   const [isUser, setIsUser] = useState(false);
@@ -34,17 +34,21 @@ function App() {
   }, []);
   const handlePage = function (page) {
     window.scrollTo(0, 0);
-    localStorage.setItem("pageView", page)
+    localStorage.setItem("pageView", page);
     setPage(localStorage.getItem("pageView"));
   };
   return (
     <>
       <Header isLogged={isUser} handlePage={handlePage} />
       {active === "Home" && <Main handlePage={handlePage}></Main>}
-      {active === "Servers" && <div className="center-div"><Servers></Servers></div>}
-      {active === "About" && <About></About>} 
-      {active === "Games" && <Games></Games>} 
-      {active === "User" && <UserPanel></UserPanel> }
+      {active === "Servers" && (
+        <div className="center-div">
+          <Servers></Servers>
+        </div>
+      )}
+      {active === "About" && <About></About>}
+      {active === "Games" && <Games></Games>}
+      {active === "User" && <UserPanel></UserPanel>}
       <Footer />
     </>
   );

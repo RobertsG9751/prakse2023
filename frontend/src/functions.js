@@ -15,7 +15,7 @@ export const parseJwt = (token) => {
 };
 
 export const logout = () => {
-  localStorage.setItem("pageView", "Home")
+  localStorage.setItem("pageView", "Home");
   localStorage.removeItem("user_data");
   window.location.replace("http://localhost:3000/");
   console.log("logged out");

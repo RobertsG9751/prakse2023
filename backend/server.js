@@ -35,8 +35,8 @@ passport.deserializeUser((user, done) => {
 passport.use(
   new SteamStrategy(
     {
-      returnURL: "http://localhost:3001/api/auth/steam/return",
-      realm: "http://localhost:3001/",
+      returnURL: "https://prakse2023-backend.vercel.app/api/auth/steam/return",
+      realm: "https://prakse2023-backend.vercel.app/",
       apiKey: "F293588E3D0C16E3CF253D7CBD1BD0BC",
     },
     function (identifier, profile, done) {
@@ -82,7 +82,7 @@ app.get(
   "/api/auth/steam",
   passport.authenticate("steam", { failureRedirect: "/" }),
   function (req, res) {
-    res.redirect("/");
+    // res.redirect("/");
   }
 );
 
@@ -90,7 +90,8 @@ app.get(
   "/api/auth/steam/return",
   passport.authenticate("steam", { failureRedirect: "/" }),
   function (req, res) {
-    res.redirect("/");
+    console.log(`redirecting back`);
+    res.redirect("back");
   }
 );
 
