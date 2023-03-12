@@ -4,7 +4,7 @@ import React from "react";
 const Login = () => {
   return (
     <a
-      href="https://prakse2023-backend.vercel.app/api/auth/steam"
+      href="https://prakse2023-backend.cyclic.app/api/auth/steam"
       className={style.login_btn}
     >
       <svg

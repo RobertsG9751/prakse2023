@@ -17,6 +17,6 @@ export const parseJwt = (token) => {
 export const logout = () => {
   localStorage.setItem("pageView", "Home");
   localStorage.removeItem("user_data");
-  window.location.replace("http://localhost:3000/");
+  window.location.replace("https://prakse2023-frontend.vercel.app/");
   console.log("logged out");
 };

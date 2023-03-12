@@ -9,13 +9,13 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const Gamedig = require("gamedig");
-const port = 3001;
+const port = 3000;
 
 app.use(cors());
 dotenv.config();
 app.use(express.json());
 
-//savienojas ar datubāzi
+savienojas ar datubāzi
 const mysql = require("mysql2");
 const connection = mysql.createConnection({
   host: "sql7.freemysqlhosting.net",
@@ -35,8 +35,8 @@ passport.deserializeUser((user, done) => {
 passport.use(
   new SteamStrategy(
     {
-      returnURL: "https://prakse2023-backend.vercel.app/api/auth/steam/return",
-      realm: "https://prakse2023-backend.vercel.app/",
+      returnURL: "https://prakse2023-backend.cyclic.app/api/auth/steam/return",
+      realm: "https://prakse2023-backend.cyclic.app/",
       apiKey: "F293588E3D0C16E3CF253D7CBD1BD0BC",
     },
     function (identifier, profile, done) {
@@ -67,7 +67,7 @@ app.get("/", (req, res) => {
     { user: req.user, secret: process.env.DATA_SECRET },
     "jtprakse2023"
   );
-  res.redirect(`http://localhost:3000/?data=${token}`);
+  res.redirect(`https://prakse2023-frontend.vercel.app/?data=${token}`);
   //ievieto lietotāja steam id datubāzē
   connection.query(
     `INSERT INTO steam_main (steamid) VALUES ("${req.user.id}") ON DUPLICATE KEY UPDATE steamid="${req.user.id}";`,
@@ -82,7 +82,7 @@ app.get(
   "/api/auth/steam",
   passport.authenticate("steam", { failureRedirect: "/" }),
   function (req, res) {
-    // res.redirect("/");
+    res.redirect("/");
   }
 );
 
@@ -90,8 +90,7 @@ app.get(
   "/api/auth/steam/return",
   passport.authenticate("steam", { failureRedirect: "/" }),
   function (req, res) {
-    console.log(`redirecting back`);
-    res.redirect("back");
+    res.redirect("/");
   }
 );
 
@@ -104,7 +103,6 @@ app.get("/:game/:ip", async (req, res) => {
     host,
     port,
   });
-
   res.send({ game, ip, data: serverData });
 });
 

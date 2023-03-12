@@ -11,7 +11,7 @@ const Main = (props) => {
       <div className={style.banner}>
         <img
           className={style.banner_img}
-          src="http://localhost:3000/images/counter-strike-global-offensive-banner.jpg"
+          src="https://prakse2023-frontend.vercel.app/images/counter-strike-global-offensive-banner.jpg"
         ></img>
         <h1 className={style.banner_text}>TIME TO MAKE SOME BREAD</h1>
       </div>
@@ -19,7 +19,7 @@ const Main = (props) => {
       <div className={style.crypto_sec}>
         <img
           className={style.crypto_img}
-          src="http://localhost:3000/images/coin.jpg"
+          src="https://prakse2023-frontend.vercel.app/images/coin.jpg"
         ></img>
         <div className={style.crypto_wrapper}>
           <h1 className={style.crypto_text}>

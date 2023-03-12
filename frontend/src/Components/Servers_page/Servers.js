@@ -7,7 +7,7 @@ const Servers = () => {
   useEffect(() => {
     const serverData = async function () {
       const res = await fetch(
-        "https://prakse2023-backend.vercel.app/csgo/51.89.194.63:25584"
+        "https://prakse2023-backend.cyclic.app/csgo/51.89.194.63:25584"
       );
       const data = await res.json();
       setServerInfo(data);

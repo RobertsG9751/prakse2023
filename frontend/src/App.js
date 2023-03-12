@@ -26,7 +26,7 @@ function App() {
         localStorage.setItem("user_data", JSON.stringify(data.user));
         setIsUser(true);
       }
-      window.location.replace("http://localhost:3000/");
+      window.location.replace("https://prakse2023-frontend.vercel.app/");
     }
     if (localStorage.getItem("user_data")) {
       setIsUser(true);
